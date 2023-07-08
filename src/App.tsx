@@ -15,7 +15,8 @@ function App() {
             {/*<Rating value={5}/>*/}
             {/*<Accordion title={"Menu (This is Accordion Title)"} collapsed={true}/>*/}
             {/*<Accordion title={"Users (This is Accordion Title)"} collapsed={false}/>*/}
-            <OnOff on={true}/>
+            <OnOff />
+            <OnOff />
 
         </div>
     );

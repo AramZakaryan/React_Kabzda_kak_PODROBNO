@@ -2,6 +2,7 @@ import React from 'react';
 import Accordion from "./components/Accordion/Accordion";
 import Rating from "./components/Rating/Rating";
 import {OnOff} from "./components/OnOff/OnOff";
+import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 
 
 function App() {
@@ -13,10 +14,11 @@ function App() {
             {/*<Rating value={3}/>*/}
             {/*<Rating value={4}/>*/}
             {/*<Rating value={5}/>*/}
-            {/*<Accordion title={"Menu (This is Accordion Title)"} collapsed={true}/>*/}
             {/*<Accordion title={"Users (This is Accordion Title)"} collapsed={false}/>*/}
-            <OnOff />
-            <OnOff />
+            <UncontrolledAccordion title={"Menu (This is UncontrolledAccordion Title)"}/>
+            <UncontrolledAccordion title={"Users (This is UncontrolledAccordion Title)"}/>
+            {/*<OnOff />*/}
+            {/*<OnOff />*/}
 
         </div>
     );

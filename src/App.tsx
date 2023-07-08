@@ -7,16 +7,15 @@ import {OnOff} from "./components/OnOff/OnOff";
 function App() {
     return (
         <div>
-            <Rating value={0}/>
-            <Rating value={1}/>
-            <Rating value={2}/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Rating value={5}/>
-            <Accordion title={"Menu (This is Accordion Title)"} collapsed={true}/>
-            <Accordion title={"Users (This is Accordion Title)"} collapsed={false}/>
+            {/*<Rating value={0}/>*/}
+            {/*<Rating value={1}/>*/}
+            {/*<Rating value={2}/>*/}
+            {/*<Rating value={3}/>*/}
+            {/*<Rating value={4}/>*/}
+            {/*<Rating value={5}/>*/}
+            {/*<Accordion title={"Menu (This is Accordion Title)"} collapsed={true}/>*/}
+            {/*<Accordion title={"Users (This is Accordion Title)"} collapsed={false}/>*/}
             <OnOff on={true}/>
-            <OnOff on={false}/>
 
         </div>
     );

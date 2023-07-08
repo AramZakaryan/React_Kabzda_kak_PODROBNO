@@ -6,15 +6,40 @@ type OnOffPropsType = {
 }
 
 export const OnOff = (props: OnOffPropsType) => {
-    let onBGC = props.on ? {backgroundColor: "green"} : {backgroundColor: ""}
-    let offBGC = !props.on ? {backgroundColor: "red"} : {backgroundColor: ""}
-    let radAC = props.on ? {accentColor: "green"} : {accentColor: "red"}
+    let onStyle = {
+        height: "20px",
+        width: "30px",
+        display: "inline-block",
+        // margin: "5px",
+        padding: "2px",
+        border: "1px solid black",
+        backgroundColor: "green"
+
+    }
+    let offStyle = {
+        height: "20px",
+        width: "30px",
+        display: "inline-block",
+        marginLeft: "5px",
+        padding: "2px",
+        border: "1px solid black",
+        backgroundColor: "red",
+    }
+    let indicatorStyle =  {
+        height: "10px",
+        width: "10px",
+        display: "inline-block",
+        marginLeft: "5px",
+        borderRadius: "50%",
+        border: "1px solid black",
+        backgroundColor: "red",
+    }
 
     return (
         <div>
-            <button style={onBGC}>On</button>
-            <button style={offBGC}>Off</button>
-            <input type="radio" checked={true} style={radAC}></input>
+            <div style={onStyle}>On</div>
+            <div style={offStyle}>Off</div>
+            <div style={indicatorStyle}></div>
         </div>
     )
 }

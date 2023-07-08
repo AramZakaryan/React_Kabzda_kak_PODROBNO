@@ -12,7 +12,7 @@ export const UncontrolledAccordion: React.FC<UncontrolledAccordionPropsType> = (
     return (
         <div>
             <UncontrolledAccordionTitle titleValue={props.title}/>
-            <button onClick={()=>{setCollapsed(current => !current)}}>toggle</button>
+            <button onClick={()=>{setCollapsed(collapsed => !collapsed)}}>toggle</button>
             {!collapsed && <UncontrolledAccordionBody/>}
         </div>
     )

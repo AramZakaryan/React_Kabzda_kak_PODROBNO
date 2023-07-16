@@ -19,8 +19,6 @@ function App() {
             <UncontrolledRating/>
             {/*<Accordion title={"Users (This is Accordion Title)"} collapsed={false}/>*/}
             <UncontrolledAccordion title={"Menu (This is UncontrolledAccordion Title)"}/>
-            <UncontrolledAccordion title={"Users (This is UncontrolledAccordion Title)"}/>
-            <OnOff />
             <OnOff />
 
         </div>

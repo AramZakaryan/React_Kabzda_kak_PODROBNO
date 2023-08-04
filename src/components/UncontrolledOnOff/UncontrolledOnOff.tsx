@@ -1,12 +1,11 @@
 import React, {useState} from "react";
 
-type OnOffPropsType = {
-    on: boolean
-    onClickCallBack: (value: boolean) => void
-}
 
 
-export const OnOff: React.FC<OnOffPropsType> = (props) => {
+
+export const UncontrolledOnOff = () => {
+
+    const [on, onSet] = useState(false)
 
     let onStyle = {
         height: "20px",
@@ -14,7 +13,7 @@ export const OnOff: React.FC<OnOffPropsType> = (props) => {
         display: "inline-block",
         padding: "2px",
         border: "1px solid black",
-        backgroundColor: props.on ? "green" : "white"
+        backgroundColor: on ? "green" : "white"
 
     }
     let offStyle = {
@@ -24,7 +23,7 @@ export const OnOff: React.FC<OnOffPropsType> = (props) => {
         marginLeft: "5px",
         padding: "2px",
         border: "1px solid black",
-        backgroundColor: props.on ? "white" : "red"
+        backgroundColor: on ? "white" : "red"
     }
     let indicatorStyle = {
         height: "10px",
@@ -33,15 +32,14 @@ export const OnOff: React.FC<OnOffPropsType> = (props) => {
         marginLeft: "5px",
         borderRadius: "50%",
         border: "1px solid black",
-        backgroundColor: props.on ? "green" : "red"
+        backgroundColor: on ? "green" : "red"
     }
-
     const onClickOnHandler = () => {
-        props.onClickCallBack(true)
+        onSet(true)
     }
 
     const onClickOffHandler = () => {
-        props.onClickCallBack(false)
+        onSet(false)
     }
 
 
@@ -49,8 +47,7 @@ export const OnOff: React.FC<OnOffPropsType> = (props) => {
         <div>
             <div style={onStyle} onClick={onClickOnHandler}>On
             </div>
-            <div style={offStyle} onClick={onClickOffHandler}>Off
-            </div>
+            <div style={offStyle} onClick={onClickOffHandler}>Off</div>
             <div style={indicatorStyle}></div>
         </div>
     )

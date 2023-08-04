@@ -14,12 +14,8 @@ export const UncontrolledAccordion: React.FC<UncontrolledAccordionPropsType> = (
         <div>
             <UncontrolledAccordionTitle
                 titleValue={props.title}
-                setCollapsed={() => setCollapsed(!collapsed)}
+                onClickCallback={() => setCollapsed(!collapsed)}
             />
-            {/*<button onClick={() => {*/}
-            {/*    setCollapsed(!collapsed)*/}
-            {/*}}>toggle*/}
-            {/*</button>*/}
             {!collapsed && <UncontrolledAccordionBody/>}
         </div>
     )
@@ -27,14 +23,14 @@ export const UncontrolledAccordion: React.FC<UncontrolledAccordionPropsType> = (
 
 type UncontrolledAccordionTitlePropsType = {
     titleValue: string
-    setCollapsed: () => void
+    onClickCallback: () => void
 }
 
 const UncontrolledAccordionTitle: React.FC<UncontrolledAccordionTitlePropsType> = (props) => {
 
     return (
         <div>
-            <h3 onClick={props.setCollapsed}>{props.titleValue}</h3>
+            <h3 onClick={props.onClickCallback}>{props.titleValue}</h3>
         </div>
     )
 }

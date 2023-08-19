@@ -4,11 +4,12 @@ import {useState} from "react";
 
 
 export default {
-    title: "OnOff Stories",
+    title: "OnOff",
     component: OnOff
 }
 
-export const OnMode = () => <OnOff on={true} onClickCallBack={action("clicked")}/>
+
+export const OnMode = () => <OnOff on={true} onClickCallBack={x=>x}/>
 export const OffMode = () => <OnOff on={false} onClickCallBack={x=>x}/>
 export const ModeChanging = () => {
     const [on, setOn] = useState(false)

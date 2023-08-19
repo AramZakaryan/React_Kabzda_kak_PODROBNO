@@ -2,7 +2,7 @@ import Rating, {RatingValueType} from "./Rating";
 import {useState} from "react";
 
 export default {
-    title: "Rating Stories",
+    title: "Rating",
     component: Rating
 }
 export const Rating0 = () => <Rating value={0} onClickCallback={x=>x}/>

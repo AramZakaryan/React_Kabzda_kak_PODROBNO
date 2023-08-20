@@ -4,7 +4,7 @@ import {useState} from "react";
 
 
 export default {
-    title: "UncontrolledOnOff",
+    title: "UncontrolledComponents/UncontrolledOnOff",
     component: UncontrolledOnOff
 }
 

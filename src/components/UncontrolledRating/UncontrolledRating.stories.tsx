@@ -2,7 +2,7 @@ import {UncontrolledRating} from "./UncontrolledRating";
 import {useState} from "react";
 
 export default {
-    title: "UncontrolledRating",
+    title: "UncontrolledComponents/UncontrolledRating",
     component: UncontrolledRating
 }
 export const RatingChanging = () => <UncontrolledRating/>

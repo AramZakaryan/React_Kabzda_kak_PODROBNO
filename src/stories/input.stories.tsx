@@ -1,6 +1,4 @@
 import {MutableRefObject, RefObject, useRef, useState} from "react";
-import {valueOf} from "node";
-import {action} from "@storybook/addon-actions";
 
 
 export default {
@@ -59,27 +57,6 @@ export const ControlledCheckbox = () => {
         <input type={"checkbox"} checked={valueFromParen}
                onChange={ev => setValueFromParent(ev.currentTarget.checked)}
         />
-
-    </>)
-}
-
-export const ControlledSelect = () => {
-
-    const [valueFromParen,
-        setValueFromParent]
-        = useState<string | undefined>(undefined)
-
-    return (<>
-
-        <select value={valueFromParen}
-                onChange={ev => setValueFromParent(ev.currentTarget.value)}
-        >
-            <option>none</option>
-            <option value={"1"}>Minsk</option>
-            <option value={"2"}>Moscow</option>
-            <option value={"3"}>Kiev</option>
-
-        </select>
 
     </>)
 }

@@ -1,6 +1,19 @@
 import React, {useState} from "react";
 
-export const Select = () => {
+
+type SelectItemtype = {
+    title: string
+    value: any
+}
+
+
+type SelectPropsType = {
+    value: any
+    onChange: (value: any) => void
+    items: SelectItemtype[]
+}
+
+export const Select: React.FC<SelectPropsType> = (props) => {
 
     const [valueFromParen,
         setValueFromParent]
@@ -8,15 +21,13 @@ export const Select = () => {
 
     return (<>
 
-        <select value={valueFromParen}
-                onChange={ev => setValueFromParent(ev.currentTarget.value)}
+        <div>{}</div>
+        {props.items.map(it => <div key={it.value}
+                                    onClick={()=>props.onChange(it.value)}
         >
-            <option>none</option>
-            <option value={"1"}>Minsk</option>
-            <option value={"2"}>Moscow</option>
-            <option value={"3"}>Kiev</option>
-
-        </select>
+            {it.title}
+        </div>)
+        }
 
     </>)
 }

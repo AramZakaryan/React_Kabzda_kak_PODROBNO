@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import {Select} from "./Select";
+import "./Select.css"
 import {action} from "@storybook/addon-actions";
 
 
@@ -8,9 +9,23 @@ export default {
     component: Select
 }
 
-export const SelectChange = () => <Select value={""}
-                                          onChange={action("kuku")}
-                                          items={[{title: "Director", value: 1},
-                                              {title: "Accountant", value: 2},
-                                              {title: "Driver", value: 3}
-                                          ]}/>
+
+export const BaseExample = () => {
+    const [selectedItemId, setSelectedItemId] = useState("1")
+    return (<Select selectedItemId={selectedItemId}
+            onChange={setSelectedItemId}
+            items={[{id: "1", title: "Moscow"},
+                {id: "2", title: "Minsk"},
+                {id: "3", title: "Kiev"}
+            ]}/>)
+}
+
+export const WithNoInitialSelect = () => {
+    const [selectedItemId, setSelectedItemId] = useState("")
+    return (<Select selectedItemId={selectedItemId}
+                    onChange={setSelectedItemId}
+                    items={[{id: "1", title: "Moscow"},
+                        {id: "2", title: "Minsk"},
+                        {id: "3", title: "Kiev"}
+                    ]}/>)
+}

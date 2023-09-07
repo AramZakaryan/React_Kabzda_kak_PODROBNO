@@ -11,10 +11,11 @@ export const UncontrolledInput = () => <input/>
 export const UncontrolledInputWithTrackedValue = () => {
     const [value,
         setValue]
-        = useState()
+        = useState<string>()
     return (<>
         <input value={value}
-               onChange={ev => setValue(ev.currentTarget.value)}/>
+            onChange={ev => setValue(ev.currentTarget.value)}
+        />
         {value}
     </>)
 }
@@ -28,7 +29,11 @@ export const UncontrolledInputWithGettingValueByButtonPres = () => {
 
     return (<>
         <input ref={inputRef}/>
-        <button onClick={() => setValue(inputRef.current.value)}>save</button>
+        <button
+            onClick={() => inputRef.current&& setValue(inputRef.current.value)}
+        >
+            save
+        </button>
         {value}
     </>)
 }

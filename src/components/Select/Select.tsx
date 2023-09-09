@@ -1,6 +1,5 @@
-import React, {useState} from "react";
+import React, {ChangeEvent, useEffect, useState} from "react";
 import {action} from "@storybook/addon-actions";
-// import "./Select.css";
 
 type SelectItemtype = {
     id: string
@@ -24,17 +23,24 @@ export const Select: React.FC<SelectPropsType> = (props) => {
         it.id === props.selectedItemId
     )
 
+    const [hoveredItemId,
+        setHoveredItemId] =
+        useState<string>()
+
     const toggleHandler = () => setCollapsed(!collapsed)
 
-    const selectHandler = (id:string) => {
+    const selectHandler = (id: string) => {
         props.onChange(id)
         setCollapsed(!collapsed)
     }
 
 
+
     return (<>
-        <h3  onClick={toggleHandler}
-            style={{width:"100px", height:"1.2em",border: "1px solid black"}}
+
+
+        <h3 onClick={toggleHandler}
+            style={{width: "100px", height: "1.2em", border: "1px solid black"}}
         >
             {selectedItem?.title}
         </h3>
@@ -43,8 +49,9 @@ export const Select: React.FC<SelectPropsType> = (props) => {
             props.items.map(it => {
 
                     return <div key={it.id}
-                                className={selectedItem?.id===it.id? "selected item":"item"}
-                                onClick={()=>selectHandler(it.id)}
+                                className={hoveredItemId===it.id?"selected item" : "item"}
+                                onClick={() => selectHandler(it.id)}
+                                onMouseEnter={() => setHoveredItemId(it.id)}
                     >
                         {it.title}
 

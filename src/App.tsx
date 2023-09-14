@@ -7,6 +7,7 @@ import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRa
 import "./App.css"
 import {OnOff} from "./components/OnOff/OnOff";
 import {UseReducerExperiements} from "./components/UseReducerExperiments/UseReducerExperiments";
+import {UncontrolledAccordionUseReducer} from "./components/UncontrolledAccordion/UncontrolledAccordionUseReducer";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             {/*<UncontrolledOnOff />*/}
 
             <UseReducerExperiements/>
+            <UncontrolledAccordionUseReducer title={"UncontrAccUseReducer"}/>
 
         </div>
     );

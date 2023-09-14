@@ -7,7 +7,6 @@ export const UseReducerExperiements = () => {
 
     const [inpValue, setInpValue] = useState<string>("")
 
-    const myRef = useRef(null)
     const reducer = (state: string[], action: { type: string, newName: any }) => {
         switch (action.type) {
             case "add user": {

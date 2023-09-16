@@ -8,6 +8,8 @@ import "./App.css"
 import {OnOff} from "./components/OnOff/OnOff";
 import {UseReducerExperiements} from "./components/UseReducerExperiments/UseReducerExperiments";
 import {UncontrolledAccordionUseReducer} from "./components/UncontrolledAccordion/UncontrolledAccordionUseReducer";
+import {UseMemoExperiements1} from "./components/UseMemoExperiments/UseMemoExperiments1";
+import {UseMemoExperiements2} from "./components/UseMemoExperiments/UseMemoExperiments2";
 
 
 function App() {
@@ -24,9 +26,11 @@ function App() {
             {/*<UncontrolledAccordion title={"Menu (This is UncontrolledAccordion Title)"}/>*/}
             {/*<OnOff on={on} onClickCallBack={setOn}/>*/}
             {/*<UncontrolledOnOff />*/}
+            {/*<UseReducerExperiements/>*/}
+            {/*<UncontrolledAccordionUseReducer title={"UncontrAccUseReducer"}/>*/}
 
-            <UseReducerExperiements/>
-            <UncontrolledAccordionUseReducer title={"UncontrAccUseReducer"}/>
+            {/*<UseMemoExperiements1/>*/}
+            <UseMemoExperiements2/>
 
         </div>
     );

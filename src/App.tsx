@@ -10,6 +10,7 @@ import {UseReducerExperiements} from "./components/UseReducerExperiments/UseRedu
 import {UncontrolledAccordionUseReducer} from "./components/UncontrolledAccordion/UncontrolledAccordionUseReducer";
 import {UseMemoExperiements1} from "./components/UseMemoExperiments/UseMemoExperiments1";
 import {UseMemoExperiements2} from "./components/UseMemoExperiments/UseMemoExperiments2";
+import {UseMemoExperiements3} from "./components/UseMemoExperiments/UseMemoExperiments3";
 
 
 function App() {
@@ -30,7 +31,8 @@ function App() {
             {/*<UncontrolledAccordionUseReducer title={"UncontrAccUseReducer"}/>*/}
 
             {/*<UseMemoExperiements1/>*/}
-            <UseMemoExperiements2/>
+            {/*<UseMemoExperiements2/>*/}
+            <UseMemoExperiements3/>
 
         </div>
     );

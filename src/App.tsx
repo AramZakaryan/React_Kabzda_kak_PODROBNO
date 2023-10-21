@@ -11,7 +11,8 @@ import {UncontrolledAccordionUseReducer} from "./components/UncontrolledAccordio
 import {UseMemoExperiements1} from "./components/UseMemoExperiments/UseMemoExperiments1";
 import {UseMemoExperiements2} from "./components/UseMemoExperiments/UseMemoExperiments2";
 import {UseMemoExperiements3} from "./components/UseMemoExperiments/UseMemoExperiments3";
-import {UseStateExperiements} from "./components/UseStateExperiments/UseStateExperiments";
+import { UseStateExperiements} from "./components/UseStateExperiments/UseStateExperiments";
+import {UseEffectExperiements} from "./components/UseEffectExperiments/UseEffectExperiments";
 
 
 function App() {
@@ -35,7 +36,8 @@ function App() {
             {/*<UseMemoExperiements2/>*/}
             {/*<UseMemoExperiements3/>*/}
 
-            <UseStateExperiements/>
+            {/*<UseStateExperiements/>*/}
+            <UseEffectExperiements/>
 
         </div>
     );

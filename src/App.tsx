@@ -12,14 +12,15 @@ import {UseMemoExperiements1} from "./components/UseMemoExperiments/UseMemoExper
 import {UseMemoExperiements2} from "./components/UseMemoExperiments/UseMemoExperiments2";
 import {UseMemoExperiements3} from "./components/UseMemoExperiments/UseMemoExperiments3";
 import { UseStateExperiements} from "./components/UseStateExperiments/UseStateExperiments";
-import {UseEffectExperiements} from "./components/UseEffectExperiments/UseEffectExperiments";
+import { UseEffectExperiements} from "./components/UseEffectExperiments/UseEffectExperiments";
+import {SetTimeoutExperiements} from "./components/UseSetTimeourExperiments/UseSetTimeoutExperiments";
 
 
 function App() {
-
-    const [ratingValue, setRatingValue]= useState<RatingValueType>(0)
-    const [collapsed, setCollapsed]= useState<boolean>(false)
-    const [on, setOn] = useState(false)
+    //
+    // const [ratingValue, setRatingValue]= useState<RatingValueType>(0)
+    // const [collapsed, setCollapsed]= useState<boolean>(false)
+    // const [on, setOn] = useState(false)
 
     return (
         <div className={"App"}>
@@ -37,19 +38,20 @@ function App() {
             {/*<UseMemoExperiements3/>*/}
 
             {/*<UseStateExperiements/>*/}
-            <UseEffectExperiements/>
+            {/*<UseEffectExperiements/>*/}
+            <SetTimeoutExperiements/>
 
         </div>
     );
 }
 
-function PageTitle(props: { title: string }) {
-    return (
-        <div>
-            {props.title}
-        </div>
-    );
-}
+// function PageTitle(props: { title: string }) {
+//     return (
+//         <div>
+//             {props.title}
+//         </div>
+//     );
+// }
 
 
 export default App;

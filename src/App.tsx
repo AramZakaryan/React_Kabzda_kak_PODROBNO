@@ -34,12 +34,12 @@ function App() {
             {/*<UncontrolledAccordionUseReducer title={"UncontrAccUseReducer"}/>*/}
 
             {/*<UseMemoExperiements1/>*/}
-            {/*<UseMemoExperiements2/>*/}
+            <UseMemoExperiements2/>
             {/*<UseMemoExperiements3/>*/}
 
             {/*<UseStateExperiements/>*/}
             {/*<UseEffectExperiements/>*/}
-            <SetTimeoutExperiements/>
+            {/*<SetTimeoutExperiements/>*/}
 
         </div>
     );

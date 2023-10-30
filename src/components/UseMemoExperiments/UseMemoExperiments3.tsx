@@ -7,16 +7,16 @@ const Counter = (props: { count: number }) => {
     </>
 }
 
-const Books = (props: { addBook: () => void }) => {
-    console.log("render of Users")
+const Books:React.FC<{ addBook: () => void }> = (props) => {
+    console.log("render of Books")
 
     return <div>
-        <button onClick={props.addBook}>add User</button>
+        <button onClick={props.addBook}>add Book</button>
     </div>
 }
 
 const MemoBooks = React.memo(Books)
-export const UseMemoExperiements3 = () => {
+export const UseMemoExperiements3: React.FC = () => {
     const [count, setCount] = useState<number>(0)
     const [books, setBooks] = useState(["React", "JS", "HTML", "CSS"])
 

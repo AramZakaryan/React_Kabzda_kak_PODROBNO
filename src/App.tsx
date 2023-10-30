@@ -14,6 +14,7 @@ import {UseMemoExperiements3} from "./components/UseMemoExperiments/UseMemoExper
 import { UseStateExperiements} from "./components/UseStateExperiments/UseStateExperiments";
 import { UseEffectExperiements} from "./components/UseEffectExperiments/UseEffectExperiments";
 import {SetTimeoutExperiements} from "./components/UseSetTimeourExperiments/UseSetTimeoutExperiments";
+import {Clock} from "./components/Clock/Clock";
 
 
 function App() {
@@ -34,11 +35,11 @@ function App() {
             {/*<UncontrolledAccordionUseReducer title={"UncontrAccUseReducer"}/>*/}
 
             {/*<UseMemoExperiements1/>*/}
-            <UseMemoExperiements2/>
             {/*<UseMemoExperiements3/>*/}
 
             {/*<UseStateExperiements/>*/}
             {/*<UseEffectExperiements/>*/}
+            <Clock/>
             {/*<SetTimeoutExperiements/>*/}
 
         </div>

@@ -1,8 +1,11 @@
 import "./App.css"
 import {MyClock} from "./components/MyClock/MyClock";
+import {ClearUseEffect} from "./components/ClearUseEffect/ClearUseEffect";
+import {useState} from "react";
 
 
 function App() {
+    const [showClearUseEffect, setShowClearUseEffect] = useState(true)
     return (
         <div className={"App"}>
             {/*<Rating value={ratingValue} onClickCallback={setRatingValue}/>*/}
@@ -20,7 +23,12 @@ function App() {
             {/*<UseStateExperiements/>*/}
             {/*<UseEffectExperiements/>*/}
             {/*<SetTimeoutExperiements/>*/}
-            <MyClock/>
+            {/*<MyClock/>*/}
+            <button onClick={()=>setShowClearUseEffect(prev=>!prev)}>show/hide ClearUseEffect</button>
+            <br/>
+            <br/>
+            <br/>
+            {showClearUseEffect&&<ClearUseEffect/>}
         </div>
     );
 }
